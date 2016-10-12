@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="bootstrap.css" />
+	<script src="script.js"></script> 
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js" ></script>
+	<script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+	<script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
+	 
+	
+	<title>Cadastro de Mercadoria</title>
+</head>
+
+<body>
+	<header>	
+	</header>
+
+    <nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+		  <ul class="nav navbar-nav">
+			<li><a href="#">Cadastrar</a></li>
+			<li><a href="#">Cadastrados</a></li>
+		  </ul>
+	  </div>
+	</nav>
+	
+	<section>
+		<div class="col-xs-8">	
+			<h2>Formulário de Cadastro</h2>
+			<form	id="form"	action="insert.php"	method="POST">
+
+				<label for="codigo">Código da Mercadoria</label><br>
+				<input type="text"	name="codigo" id="codigo" size="40px"><br>				
+				
+				<label for="tipoMercadoria">Tipo da Mercadoria</label><br>
+				<input type="text" name="tipo" id="tipo" size="40px" onkeypress="return apenasChar(event)"><br>
+								
+				<label for="nome">Nome da Mercadoria</label> <br>
+				<input type="text" name="nome" id="nome" size="40px"><br>
+					
+				<label>Tipo do Negócio</label> <br>
+				<input type="radio" name="negocio" id="compra" checked> Compra<br>
+				<input type="radio" name="negocio" id="venda"> Venda<br>
+								
+				<label	for="quantidade" >Quantidade</label> <br>
+				<input	type="number" name="quantidade"	id="quantidade" size="15px"><br>
+								
+				<label	for="preco">Preço: </label><br>
+				<input	type="text" name="preco" id="preco" size="15px"><br>
+								
+				<p><input type="submit"	value="Confirmar" onclick="verificar()" style=" margin-top:15px;"></p>
+			</form>		
+		</div>
+	
+	</section>
+
+	<footer>
+	</footer>
+
+</body>
+</html>
